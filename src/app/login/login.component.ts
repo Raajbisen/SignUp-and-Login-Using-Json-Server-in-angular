@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
         alert("Login Success");
         this.login.reset();
-        this.router.navigate(['loginsuccess'])
+        this.router.navigate(['newsapi'])
       }
 
       else{

@@ -8,14 +8,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
+import { NewsapiComponent } from './newsapi/newsapi.component';
+import { NewsapiservicesService } from './service/newsapiservices.service';
+import { TechnewsComponent } from './technews/technews.component';
+import { SportsComponent } from './sports/sports.component';
+import { EntertainmentComponent } from './entertainment/entertainment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    LoginsuccessComponent
+    NewsapiComponent,
+    TechnewsComponent,
+    SportsComponent,
+    EntertainmentComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,7 @@ import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [NewsapiservicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

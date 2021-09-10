@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/login">NewsHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/newsapi">Headlines</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/technews">Tech News</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/sportsnews">Sports News</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container mt-5">
+
+    <h4>Tech News</h4>
+
+    <div class="row">
+
+        <div *ngFor="let news of techNewsDisplay" class="col-lg-3 mt-3 mb-3">
+
+            <div class="box">
+            <img src="{{news.urlToImage}}" width="100%">
+            <h5 class="mt-2 mb-2">{{news.title}}</h5>
+            <p>Source: {{news.author}}</p>
+
+            <p>{{news.publishedAt}}</p>
+            
+            <a href="{{news.url}}" target="_blank" class="btn btn-dark btn-sm">Read More</a>
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Developed By Raj Bisen</p>
+  </div>
+
+
+  
